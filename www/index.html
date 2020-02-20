@@ -13,18 +13,100 @@
 
 </head>
 <body>
-  <div class="container">
-    <div class="row">
-      <div class="col-sm">
-        <div class="form-group">
-          <label> Valor 1 </label>
-          <input type="number" class="form-control">
-        </div>
+  <div id="all">
+<div id="res"></div>
+<input type="text" id="v1">
+<input type="text" id="v2"><br>
+<button value="+" onclick="soma()">+</button>
+<button value="-" onclick="sub()">-</button>
+<button value="*" onclick="mult()">x</button>
+<button value="/" onclick="div()">/</button><br>
+<input
+type="button"
+value="Limpar">
+</div>
+
+</body>
+<style type="text/css">
+	body{
+		font-family: sans-serif;
+		margin: 0;
+		padding: 0;
+		background: #00BFFF;
+	}
+	#all
+	{
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%,-50%);
+	}
+	#all input
+	{
+		text-align: center; 
+		font-size: 20px;
+		height: 30px;
+		width: 100px;
+		border: 2px solid #000;
+		border-radius: 10px;
+		margin-bottom: 10px;
+	}
+	#all button{
+		width: 45px;
+		height: 47px;
+		border: 2px solid #000;
+		font-size: 30px;
+		background: #8181F7;
+		border-radius: 50%;
+	}
+	#res
+	{
+		text-align: center;
+		font-size: 30px;
+		color: black;
+		width: 212px;
+		height: 50px;
+		background: #8181F7;
+		margin-bottom: 10px;
+		border-radius: 10px;
+	}
+</style>
+<script type="text/javascript">
+	function soma(){
+		v1=document.getElementById('v1').value;
+		v2=document.getElementById('v2').value;
+		var res=parseInt(v1)+parseInt(v2);
+		document.getElementById('res').innerHTML=res;
+	}
+		function sub(){
+		v1=document.getElementById('v1').value;
+		v2=document.getElementById('v2').value;
+		var res=v1-v2;
+		document.getElementById('res').innerHTML=res;
+	}
+		function mult(){
+		v1=document.getElementById('v1').value;
+		v2=document.getElementById('v2').value;
+		var res=v1*v2;
+		document.getElementById('res').innerHTML=res;
+	}
+		function div(){
+		v1=document.getElementById('v1').value;
+		v2=document.getElementById('v2').value;
+		var res=v1/v2;
+		document.getElementById('res').innerHTML=res;
+	}
+</script>
+    <div class="col-3">
       </div>
+      <div class="col-3">
+      </div>
+      <div class="col-3">
+      </div>
+      </div>
+
     </div>
     <br>
-    <label> Valor 2 </label
-    <input type="number" class="form-control">
     
 </body>
 </html>
