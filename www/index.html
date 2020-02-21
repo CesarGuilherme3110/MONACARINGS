@@ -23,7 +23,7 @@
 <button value="/" onclick="div()">/</button><br>
 <input
 type="button"
-value="Limpar">
+value="Limpar" onclick="limp()">
 </div>
 
 </body>
@@ -81,21 +81,24 @@ value="Limpar">
 		function sub(){
 		v1=document.getElementById('v1').value;
 		v2=document.getElementById('v2').value;
-		var res=v1-v2;
+		var res=eval(v1-v2);
 		document.getElementById('res').innerHTML=res;
 	}
 		function mult(){
 		v1=document.getElementById('v1').value;
 		v2=document.getElementById('v2').value;
-		var res=v1*v2;
+		var res=eval(v1*v2);
 		document.getElementById('res').innerHTML=res;
 	}
 		function div(){
 		v1=document.getElementById('v1').value;
 		v2=document.getElementById('v2').value;
-		var res=v1/v2;
+		var res=eval(v1/v2);
 		document.getElementById('res').innerHTML=res;
 	}
+  function limp(){
+    document.getElementById('res').innerHTML="";
+  }
 </script>
     <div class="col-3">
       </div>
